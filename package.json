@@ -1,0 +1,25 @@
+{
+    "name": "afd-pila",
+    "version": "1.0.0",
+    "description": "Afd de pila",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron .",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder"
+    },
+    "author": "Jared Salazar",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^11.0.2",
+        "electron-builder": "^22.9.1"
+    },
+    "build": {
+        "appId": "com.jared.afd",
+        "win": {
+            "target": "nsis",
+            "icon": "build/chart.ico"
+        }
+    }
+}
