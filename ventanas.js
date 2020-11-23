@@ -9,10 +9,14 @@ firstButton.addEventListener('click', (event) => {
 
     let ventana1 = new BrowserWindow({
         width: 700,
-        height: 500
+        height: 500,
+        webPreferences: {
+            nodeIntegration: true,
+            enableRemoteModule: true,
+            nodeIntegrationInWorker: true
+        }
     });
 
-    ventana1.on('close', () => { ventana1 = null });
     ventana1.loadURL(afd1er);
     ventana1.show();
 });
@@ -22,7 +26,12 @@ secondButton.addEventListener('click', (event) => {
 
     let ventana2 = new BrowserWindow({
         width: 700,
-        height: 500
+        height: 500,
+        webPreferences: {
+            nodeIntegration: true,
+            enableRemoteModule: true,
+            nodeIntegrationInWorker: true
+        }
     });
 
     ventana2.on('close', () => { ventana2 = null });
