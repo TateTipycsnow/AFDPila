@@ -5,7 +5,7 @@ const firstButton = document.getElementById('1erAFD');
 const secondButton = document.getElementById('2ndAFD');
 
 firstButton.addEventListener('click', (event) => {
-    const afd1er = path.join('file://', __dirname, '/windows/1erAFD.html');
+    const afd1er = path.join('file://', __dirname, '/windows/Primer AFD/1erAFD.html');
 
     let ventana1 = new BrowserWindow({
         width: 700,
@@ -22,7 +22,7 @@ firstButton.addEventListener('click', (event) => {
 });
 
 secondButton.addEventListener('click', (event) => {
-    const afd2nd = path.join('file://', __dirname, '/windows/2ndAFD.html');
+    const afd2nd = path.join('file://', __dirname, '/windows/Segundo AFD/2ndAFD.html');
 
     let ventana2 = new BrowserWindow({
         width: 700,

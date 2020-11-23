@@ -1,5 +1,4 @@
-const { BrowserWindow, dialog } = require('electron').remote;
-const path = require('path');
+const { dialog } = require('electron').remote;
 
 const button = document.getElementById('verificar')
 
@@ -45,16 +44,12 @@ const automata = {
 }
 
 button.addEventListener('click', (event) => {
-    debugger;
     let cadena = document.getElementById('txtCadena').value;
     let estadoActual = automata.estadoInicial;
     let error = false;
-    let pila = [];
-    pila.push('');
+    let pila = [''];
 
     cadena.split('').every(simbolo => {
-        console.log(simbolo);
-
         let encuentraTransicion = false;
 
         automata.transiciones.every(transicion => {
@@ -88,5 +83,4 @@ button.addEventListener('click', (event) => {
         }
         dialog.showMessageBox(options);
     }
-
 });
