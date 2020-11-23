@@ -17,17 +17,17 @@ const automata = {
             simbolo: 'a',
             simboloPila: 'A',
             al_estado: 1,
-            al_simbolo: ['A', 'A']
-        },
-        {
-            estado: 1,
-            simbolo: 'b',
-            simboloPila: 'A',
-            al_estado: 2,
             al_simbolo: ['B']
         },
         {
-            estado: 2,
+            estado: 1,
+            simbolo: 'a',
+            simboloPila: 'B',
+            al_estado: 1,
+            al_simbolo: ['B', 'A']
+        },
+        {
+            estado: 1,
             simbolo: 'b',
             simboloPila: 'B',
             al_estado: 2,
@@ -36,9 +36,9 @@ const automata = {
         {
             estado: 2,
             simbolo: 'b',
-            simboloPila: 'A',
+            simboloPila: 'B',
             al_estado: 2,
-            al_simbolo: ['B']
+            al_simbolo: ['']
         }
     ]
 }
@@ -72,7 +72,6 @@ button.addEventListener('click', (event) => {
 
         if (!encuentraTransicion) {
             error = true;
-            dialog.showErrorBox('Error', 'La cadena no es valida.');
             return false;
         }
         return true;
@@ -84,6 +83,8 @@ button.addEventListener('click', (event) => {
             message: 'Cadena correcta'
         }
         dialog.showMessageBox(options);
+    } else {
+        dialog.showErrorBox('Error', 'La cadena no es valida.');
     }
 
 });

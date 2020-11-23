@@ -70,7 +70,6 @@ button.addEventListener('click', (event) => {
 
         if (!encuentraTransicion) {
             error = true;
-            dialog.showErrorBox('Error', 'La cadena no es valida.');
             return false;
         }
         return true;
@@ -82,5 +81,7 @@ button.addEventListener('click', (event) => {
             message: 'Cadena correcta'
         }
         dialog.showMessageBox(options);
+    } else {
+        dialog.showErrorBox('Error', 'La cadena no es valida.');
     }
 });
