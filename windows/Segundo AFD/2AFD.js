@@ -1,3 +1,4 @@
+//Misma estructura a la del primer AFD
 const { dialog } = require('electron').remote;
 
 const button = document.getElementById('verificar')
@@ -58,7 +59,7 @@ button.addEventListener('click', (event) => {
             if (transicion.estado == estadoActual && transicion.simbolo == simbolo && transicion.simboloPila == pila[pila.length - 1]) {
                 pila.pop();
                 for (i = 0; i < (transicion.al_simbolo.length); i++) {
-                    if (transicion.al_simbolo != '') {
+                    if (transicion.al_simbolo[i] != '') {
                         pila.push(transicion.al_simbolo[i]);
                     }
                 }
