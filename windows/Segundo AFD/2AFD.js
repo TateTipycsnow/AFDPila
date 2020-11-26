@@ -1,4 +1,3 @@
-//Misma estructura a la del primer AFD
 const { dialog } = require('electron').remote;
 
 const button = document.getElementById('verificar')

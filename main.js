@@ -1,20 +1,17 @@
-//Funcionamiento central del programa
-//Primero se referencia a  electron
 const { app, BrowserWindow } = require('electron');
 
-//Se crea una funcion para crear la ventana principal donde se especifican las caracteristicas de las ventanas
 function createWindow() {
     const win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 650,
+        height: 500,
         webPreferences: {
-            nodeIntegration: true, //informacion necesaria para el funcionamiento
-            enableRemoteModule: true, //del js en estas ventanas, sin esto marca error
-            nodeIntegrationInWorker: true //en la referencia de electron
+            nodeIntegration: true,
+            enableRemoteModule: true,
+            nodeIntegrationInWorker: true
         }
     });
 
-    win.loadFile('index.html'); //Carga de la vista principal
+    win.loadFile('index.html');
 }
 
 app.whenReady().then(createWindow);
